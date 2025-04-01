@@ -54,9 +54,24 @@ body {
 .wrapper {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 1.5rem;
-  padding: 2rem;
-  min-width: 400px;
+  padding: 1.5rem 3rem;
   box-shadow: 0 4px 8px rgba(100, 100, 100, 0.5);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 70%;
+  }
+  .search-input {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    width: 50%;
+  }
 }
 
 .city {
@@ -67,6 +82,8 @@ body {
 .temperature {
   font-size: 3.5rem;
   font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0px;
 }
 
 .condition {
@@ -111,15 +128,17 @@ body {
   font-size: 0.875rem;
 }
 
-.form {
+.search-form {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px auto;
   padding: 10px;
+  /*
   background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  */
+  border-radius: 10px;  
   max-width: 400px;
 }
 

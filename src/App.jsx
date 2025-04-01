@@ -10,7 +10,7 @@ function Weather() {
   const [city, setCity] = useState("san diego");
   const [searchInput, setSearchInput] = useState("");
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const fetchWeatherData = async (cityName) => {
     setCity(cityName);
