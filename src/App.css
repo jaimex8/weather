@@ -1,8 +1,8 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .logo {
@@ -61,16 +61,11 @@ body {
 
 @media screen and (max-width: 768px) {
   .wrapper {
-    width: 70%;
+    width: 75%;
+    padding: 1.5rem 2.5rem;
   }
   .search-input {
     max-width: 70%;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .wrapper {
-    width: 58%;
   }
 }
 
@@ -154,14 +149,14 @@ body {
 }
 
 .search-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgb(255, 255, 255);
 }
 
 .search-input:focus {
   border-color: #3b82f6;
 }
 
-.search-btn {
+.search-button {
   padding: 10px 15px;
   font-size: 16px;
   color: white;
