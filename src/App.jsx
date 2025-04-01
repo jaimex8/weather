@@ -17,13 +17,13 @@ function Weather() {
     try {
       setLoading(true)
       setError(null)
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=imperial`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=imperial`;
       const response = await fetch(url);
       const data = await response.json();
 
       setWeatherData(data);
 
-      const forecasturl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=imperial`;
+      const forecasturl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}&units=imperial`;
       const forecastresponse = await fetch(forecasturl);
       const forecastdata = await forecastresponse.json();
 
@@ -75,7 +75,7 @@ function Weather() {
           </button>
         </form>
 
-        {error && <p className="error"></p>}
+        {error && <p className="error">{error}</p>}
 
 
         <Details value={weatherData} />
